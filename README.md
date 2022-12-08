@@ -11,7 +11,7 @@ to upgrade the packages use: `sudo apt upgrade`
 ![codeblock](/Images/editedcode.png)
 
 ##### Part 3: journalctl
-1. searching journalctl with `man journalctl`
+1. searching journalctl with `man journalctl`  
 ![manjournalctl](/Images/manjournalctl.png)
 2. Using `/logs` to search for logs, I found -b is the appropriate command to use for printing logs for the current boot
 ![journalctlb](/Images/journalctlb.png)
@@ -19,7 +19,7 @@ to upgrade the packages use: `sudo apt upgrade`
 ![journalctlp](/Images/journalctlp.png)
 4. Using `/json` to search for outputting in pretty json format, I found -o is the appropriate command with the option `json-pretty` to use for printing logs in pretty json format
 ![journalctlo](/Images/journalctlo.png)
-5. The final command will be: `journalctl -b -p 6 -o json-pretty`
+5. The final command will be: `journalctl -b -p 6 -o json-pretty`  
 ![finaljournalctl](/Images/finaljournalctl.png)
 
 ##### Part 4: finding users
@@ -60,11 +60,11 @@ ExecStart="/opt/allusers/allusers"
 WantedBy=multi-user.target
 ```
 3. Daemon-reload, start, and enable the service with
-`sudo systemctl daemon-reload`
-`sudo systemctl start allusers.service`
-`sudo systemctl enable allusers.service`
+`sudo systemctl daemon-reload`  
+`sudo systemctl start allusers.service`  
+`sudo systemctl enable allusers.service`  
 4. Check the status of the service with 
-`systemctl status allusers.service`
+`systemctl status allusers.service`  
 ![savestartenable](/Images/savestartenable.png)
 This will only run once due to oneshot type. Service was run and exited successfully. 
 ![allusersstatus](/Images/allusersstatus.png)
@@ -86,9 +86,9 @@ Persistent=true
 WantedBy=timers.target
 ```
 3. Daemon-reload, start, and enable the timer with
-`sudo systemctl daemon-reload`
-`sudo systemctl start allusers.timer`
-`sudo systemctl enable allusers.timer`
+`sudo systemctl daemon-reload`  
+`sudo systemctl start allusers.timer`  
+`sudo systemctl enable allusers.timer`  
 4. Check the status of the timer with
-`systemctl status allusers.timer`
+`systemctl status allusers.timer`  
 ![timerstatus](/Images/alluserstimer.png)
