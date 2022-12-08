@@ -59,7 +59,7 @@ ExecStart="/opt/allusers/allusers"
 [Install]
 WantedBy=multi-user.target
 ```
-3. Daemon-reload, start, and enable the service with
+3. Daemon-reload, start, and enable the service with  
 `sudo systemctl daemon-reload`  
 `sudo systemctl start allusers.service`  
 `sudo systemctl enable allusers.service`  
@@ -85,7 +85,7 @@ Persistent=true
 [Install]
 WantedBy=timers.target
 ```
-3. Daemon-reload, start, and enable the timer with
+3. Daemon-reload, start, and enable the timer with  
 `sudo systemctl daemon-reload`  
 `sudo systemctl start allusers.timer`  
 `sudo systemctl enable allusers.timer`  
